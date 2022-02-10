@@ -1,0 +1,101 @@
+[
+  {
+    "_id": {
+      "$oid": "6203bfe5ef1cfb7b16051a03"
+    },
+    "title": "Create react-app",
+    "isCompleted": true,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c26fef1cfb7b16051a04"
+    },
+    "title": "Material UI",
+    "isCompleted": true,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c2f7ef1cfb7b16051a05"
+    },
+    "title": "Backend with Node and Express",
+    "isCompleted": false,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c33dc7431c8abfc2572d"
+    },
+    "title": "Authentication with JWT",
+    "isCompleted": false,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id":{
+      "$oid":"6203c368c7431c8abfc2572e"
+    },
+    "title":"Deployment on Github or Gitlab",
+    "isCompleted":false,
+    "isDeleted":false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c382c7431c8abfc2572f"
+    },
+    "title": "Testing",
+    "isCompleted": false,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c394c7431c8abfc25730"
+    },
+    "title": "ESLint",
+    "isCompleted": false,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c3a8c7431c8abfc25731"
+    },
+    "title": "Create Database for data persistence",
+    "isCompleted": false,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  },
+  {
+    "_id": {
+      "$oid": "6203c3bec7431c8abfc25732"
+    },
+    "title": "Generate Docker Container",
+    "isCompleted": false,
+    "isDeleted": false,
+    "fromUser": [{
+      "$oid":"6203c4e04d249e9b62951a85"
+    }]
+  }
+]
