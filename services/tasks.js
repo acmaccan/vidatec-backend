@@ -1,7 +1,7 @@
 const tasksRepo = require('../repositories/tasks');
 
-const getAll = async (req) => {
-  const data = await tasksRepo.getAll(req);
+const getAll = async (id) => {
+  const data = await tasksRepo.getAll(id);
   return data;
 };
 
@@ -15,13 +15,18 @@ const getById = async (params) => {
   return data;
 };
 
-const create = async (body) => {
-  const data = await tasksRepo.create(body);
+const create = async (id, body) => {
+  const task = {
+    ...body,
+    fromUser: id
+  }
+
+  const data = await tasksRepo.create(task);
   return data;
 };
 
-const update = async (params, body) => {
-  const data = await tasksRepo.update(params.id, body);
+const complete = async (params, body) => {
+  const data = await tasksRepo.complete(params.id, body.isCompleted);
   return data;
 };
 
@@ -39,6 +44,6 @@ module.exports = {
   getAll,
   getById,
   create,
-  update,
+  complete,
   remove
 };

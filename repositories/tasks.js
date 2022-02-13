@@ -1,8 +1,7 @@
 const Task = require('../models/Task');
 
 const getAll = async (id) => {
-  const data = await Task.find({});
-  // const data = await Task.find({ 'fromUser': [ id ] });
+  const data = await Task.find({ 'isDeleted': false, 'fromUser': [ id ] });
   return data;
 };
 
@@ -16,12 +15,11 @@ const create = async (body) => {
   return data;
 };
 
-const update = async (id, body) => {
+const complete = async (id, isCompleted) => {
   let task = await Task.findById(id);
-  
-  task.isCompleted = body.isCompleted;
-  task.title = body.title;
 
+  task.isCompleted = isCompleted;
+  
   const data = await task.save();
   return data;
 };
@@ -38,6 +36,6 @@ module.exports = {
   getAll,
   getById,
   create,
-  update,
+  complete,
   remove
 };

@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('../modules/jwt');
 const usersRepository = require('../repositories/users');
 
-const login = async (body) => {
+const login = async (body) => { 
   const userExists = await usersRepository.findByEmail(body.email);
   if (!userExists) throw new Error('Email is not registered');
 
