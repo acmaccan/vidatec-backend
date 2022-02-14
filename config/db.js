@@ -3,7 +3,18 @@ require('dotenv').config();
 
 const dbConnection = () => {
   try {
-    mongoose.connect(process.env.MONGODB);
+    mongoose.connect(process.env.MONGODB, {
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+      userCreateIndex: true,
+      server: {
+        socketOptions: { keepAlive: 300000, connectTimeoutMS: 300000 }
+      },
+      replicaSet: {
+        socketOptions: { keepAlive: 300000, connectTimeoutMS: 300000 }
+      }
+    });
     console.log('Database connection ok');
   } catch (error) {
     console.log(error);
