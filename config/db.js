@@ -4,10 +4,8 @@ require('dotenv').config();
 const dbConnection = () => {
   try {
     mongoose.connect(process.env.MONGODB, {
-      useFindAndModify: false,
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      userCreateIndex: true,
       server: {
         socketOptions: { keepAlive: 300000, connectTimeoutMS: 300000 }
       },
