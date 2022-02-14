@@ -6,8 +6,8 @@ const dbConnection = () => {
     mongoose.connect(process.env.MONGODB, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      keepAlive: true, 
-      connectTimeoutMS: 300000
+      keepAlive: true,
+      connectTimeoutMS: 300000,
     });
     console.log('Database connection ok');
   } catch (error) {
